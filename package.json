@@ -1,0 +1,25 @@
+{
+  "name": "otel-eval-hello",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Minimal repro: Braintrust Eval() -> downstream OpenAI agent server, traces nested under the experiment via @braintrust/otel",
+  "scripts": {
+    "server": "node --import braintrust/hook.mjs --import tsx src/server.ts",
+    "eval": "tsx src/eval.ts"
+  },
+  "dependencies": {
+    "@braintrust/otel": "latest",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/core": "^2.0.0",
+    "@opentelemetry/sdk-node": "^0.200.0",
+    "braintrust": "latest",
+    "dotenv": "^16.4.5",
+    "openai": "^4.104.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}
